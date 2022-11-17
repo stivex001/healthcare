@@ -50,13 +50,12 @@
 Clone the project
 
 ```
-git clone https://github.com/EAZYLINK/Group2-team2.git
+https://github.com/stivex001/healthcare.git
 ```
 
 Go to the project directory
 
 ```
-cd Project-Group2-team2
 ```
 
 cd client
