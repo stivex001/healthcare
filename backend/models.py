@@ -16,7 +16,7 @@ def setup(app, database_path=database_path):
 
 
 class Hospitals(db.Model):
-    id = Column(Integer, primar_key=True)
+    id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     type = Column(String, nullable=False)
     city = Column(String, nullable=False)
@@ -51,18 +51,18 @@ class Hospitals(db.Model):
         }
 
 
-class Patients(db.Model):
-    id = Column(Integer, primary_key=True)
-    name = Column(String, nullabe=False)
-    age = Column(String, nullable=False)
+# class Patients(db.Model):
+#     id = Column(Integer, primary_key=True)
+#     name = Column(String, nullabe=False)
+#     age = Column(String, nullable=False)
 
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def format(self):
-        return {
-            'id': self.id,
-            'type': self.type
-        }
+#     def format(self):
+#         return {
+#             'id': self.id,
+#             'type': self.type
+#         }
