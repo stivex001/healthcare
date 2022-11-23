@@ -1,18 +1,17 @@
 from flask import Flask, abort, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
 from models import setup, Hospitals
 
 app = Flask(__name__)
 setup(app)
 
 
-@app.route('/hostpitals')
+@app.route('/hospitals')
 def get_hospitals():
     try:
         hospitals = Hospitals.query.all()
         all_hospitals = {}
         for hospital in hospitals:
-            all_hospitals[hospitals.id] = hospitals.name
+            all_hospitals[hospital.id] = hospital.name
 
         return jsonify ({
             "success": True,
