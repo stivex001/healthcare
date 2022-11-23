@@ -18,8 +18,9 @@ def setup(app, database_path=database_path):
 class Hospitals(db.Model):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
-    type = Column(String, nullable=False)
-    city = Column(String, nullable=False)
+    email = Column(String, nullable=False)
+    address = Column(String, nullable=False)
+    location = Column(String, nullable=False)
     state = Column(String, nullable=False)
     country = Column(String, nullable=False)
 
